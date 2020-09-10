@@ -1,0 +1,8 @@
+<div class="data-items pb-3 ps ps--active-y">
+  <div class="data-fields px-2 mt-1">
+    <div class="row">
+    	$FIELDS$
+    </div>
+  </div>
+</div>
+        

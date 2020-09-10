@@ -1,0 +1,27 @@
+
+ {{-- add new sidebar starts --}}
+    <div class="add-new-data-sidebar"  >
+      <div class="overlay-bg"></div>
+      <div class="add-new-data show" style="width:60rem;">
+          @csrf
+          <div class="div mt-2 px-2 d-flex new-data-title justify-content-between">
+            <div>
+              <h4 class="text-uppercase">Create $MODEL_NAME_HUMAN$</h4>
+            </div>
+            <div class="hide-data-sidebar">
+              <i  wire:click="close()" class="feather icon-x"></i>
+            </div>
+          </div>
+          @include('livewire.$MODEL_NAME_PLURAL_SNAKE$.fields')
+
+          <div class="add-data-footer d-flex justify-content-around px-3 mt-2">
+            <div class="add-data-btn">
+              <input  wire:click="store()" type="submit" class="btn btn-primary" value="Add">
+            </div>
+            <div class="cancel-data-btn">
+              <input wire:click="close()" type="reset" class="btn btn-outline-danger" value="Cancel">
+            </div>
+          </div>
+      </div>
+    </div>
+    {{-- add new sidebar ends --}}

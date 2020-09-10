@@ -1,0 +1,35 @@
+{
+    "name": "hoangk51/livewire-templates",
+    "type": "library",
+    "description": "templates for Livewire  Generator",
+    "keywords": [
+        "livewire",
+        "laravel",
+        "generator",
+        "templates",
+        "bootstrap"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pham Huy Hoang ",
+            "email": "phamhuyhoang1112@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "illuminate/support": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hoangk51\\AdminLTETemplates\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Hoangk51\\AdminLTETemplates\\AdminLTETemplatesServiceProvider"
+            ]
+        }
+    }
+}
