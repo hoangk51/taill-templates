@@ -1,9 +1,9 @@
 {
-    "name": "hoangk51/livewire-templates",
+    "name": "hoangk51/tall-templates",
     "type": "library",
-    "description": "templates for Livewire  Generator",
+    "description": "templates for Tall  Generator",
     "keywords": [
-        "livewire",
+        "tall",
         "laravel",
         "generator",
         "templates",
