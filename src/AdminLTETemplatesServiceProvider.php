@@ -13,7 +13,7 @@ class AdminLTETemplatesServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../views', 'livewire-templates');
+        $this->loadViewsFrom(__DIR__.'/../views', 'tall-templates');
     }
 
     /**

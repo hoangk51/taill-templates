@@ -1,1 +1,1 @@
-<th>$FIELD_NAME_TITLE$</th>
+<th class="px-4 py-3" >$FIELD_NAME_TITLE$</th>

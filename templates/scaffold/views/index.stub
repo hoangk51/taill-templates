@@ -1,26 +1,45 @@
-@extends('layouts.app')
+        <main class="h-full pb-16 overflow-y-auto">
+          <div class="container grid px-6 mx-auto">
+            <h2
+              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
+            >
+            $MODEL_NAME_PLURAL_HUMAN$
+            </h2>
+            <div class="flex justify-between">
+            <div class="">
+            <label class="block mt-4 text-sm">
+                <span class="text-gray-700 dark:text-gray-400">
+                   Limit
+                </span>
+                <select wire:model="limit" class="block  mt-1  mb-2 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                  <option>4</option>
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                </select>
+              </label>
+               </div>
+              <div class="text-center">
+              <button  wire:click="create()" @click="openModal"
+                class="mt-4 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple" > Add</button>
+                 </div>
+             </div>
+            <!-- CTA -->
+             @include('livewire.admin.$MODEL_NAME_SNAKE$.table')   
 
-@section('content')
-    <section class="content-header">
-        <h1 class="pull-left">$MODEL_NAME_PLURAL_HUMAN$</h1>
-        <h1 class="pull-right">
-           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') }}">Add New</a>
-        </h1>
-    </section>
-    <div class="content">
-        <div class="clearfix"></div>
+           
+          </div>
 
-        @include('flash::message')
+       @if($updateMode || $createMode)
+            @include('livewire.admin.$MODEL_NAME_SNAKE$.fields')      
+        @endif       
+        </main>
+     
+@push('scripts')
 
-        <div class="clearfix"></div>
-        <div class="box box-primary">
-            <div class="box-body">
-                    @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.table')
-            </div>
-        </div>
-        <div class="text-center">
-        $PAGINATE$
-        </div>
-    </div>
-@endsection
+<script type="text/javascript">
+      window.livewire.on('add' ,  val => {toastr.success('add successfully: ' ) });
+      window.livewire.on('update' ,  val => { toastr.success('update successfully: ' ) });
+</script>
 
+@endpush

@@ -1,5 +1,4 @@
-<!-- $FIELD_NAME_TITLE$ Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:') !!}
-    {!! Form::text('$FIELD_NAME$', null, ['class' => 'form-control'$SIZE$] , "wire:model"=>"data.$FIELD_NAME$") !!}
-</div>
+<label class="block text-sm mt-4">
+  <span class="text-gray-700 dark:text-gray-400">.$FIELD_NAME_TITLE$   </span>
+  <input  wire:model="data.$FIELD_NAME$" class="inp form-input "  placeholder="Jane Doe">
+</label>

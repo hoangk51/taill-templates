@@ -1,2 +1,2 @@
 
-        @include('livewire-templates::common.paginate', ['records' => $$MODEL_NAME_PLURAL_CAMEL$])
+        @include('tall-templates::common.paginate', ['records' => $$MODEL_NAME_PLURAL_CAMEL$])
