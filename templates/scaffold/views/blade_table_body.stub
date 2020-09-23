@@ -63,7 +63,8 @@
           </td>
         </tr>
         @endforeach
-        </tbody>
+        
+      </tbody>
     </table>
   </div>
 {{ $datas->links('layouts.pagination') }}

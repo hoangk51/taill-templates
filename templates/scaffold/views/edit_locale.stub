@@ -7,7 +7,7 @@
         </h1>
    </section>
    <div class="content">
-       @include('livewire-templates::common.errors')
+       @include('tall-templates::common.errors')
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
